@@ -20,10 +20,10 @@
   <script>
     $(document).ready(function () {
       $.get("products.json", function (data) {
-        var products = data.products;
+        
         var categories = new Set();
 
-        products.forEach(function (product) {
+        data.products.forEach(function (product) {
           product.categories.forEach(function (category) {
             categories.add(category);
           });
@@ -36,7 +36,7 @@
 
         $("#filter-button").click(function () {
           var selectedCategory = categorySelect.val();
-          var filteredProducts = products.filter(function (product) {
+          var filteredProducts = data.products.filter(function (product) {
             return product.categories.includes(selectedCategory);
           });
 
