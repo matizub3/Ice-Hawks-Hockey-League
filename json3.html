@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON3</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div>
+    <h2>Filter Products by Category</h2>
+    <form id="filter-form">
+      <select id="category-select">
+        <option value="">Select a category</option>
+      </select>
+      <button type="button" id="filter-button">Filter</button>
+    </form>
+  </div>
+
+  <div id="filtered-products"></div>
+
+  <script>
+    $(document).ready(function () {
+      $.get("products.json", function (data) {
+        var products = data.products;
+        var categories = new Set();
+
+        products.forEach(function (product) {
+          product.categories.forEach(function (category) {
+            categories.add(category);
+          });
+        });
+
+        var categorySelect = $("#category-select");
+        categories.forEach(function (category) {
+          categorySelect.append("<option value='" + category + "'>" + category + "</option>");
+        });
+
+        $("#filter-button").click(function () {
+          var selectedCategory = categorySelect.val();
+          var filteredProducts = products.filter(function (product) {
+            return product.categories.includes(selectedCategory);
+          });
+
+          var displayHtml = "<div id='filtered-products-container'>";
+          filteredProducts.forEach(function (product) {
+            displayHtml += "<div class='filtered-product'>";
+            displayHtml += "<h2>" + product.name + "</h2>";
+            displayHtml += "</div>";
+          });
+          displayHtml += "</div>";
+
+          $("#filtered-products").html(displayHtml);
+        });
+      });
+    });
+  </script>
+
+  <style>
+    .filtered-product {
+      border: 1px solid #ccc;
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
+</body>
+</html>
