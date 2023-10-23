@@ -5,14 +5,12 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     #productsByCategory {
-      border: 1px solid #ccc;
       margin: 10px;
       padding: 10px;
       text-align: center;
+      background-color: #ccc;
 
-      body {
-        background-color: #ccc;
-      }
+    }
   </style>
 </head>
 <body>
@@ -20,33 +18,38 @@
   <script>
     $(document).ready(function () {
       $.get("products.json", function (data) {
-        
+
+        //Make a new Set (Array which does not repeat elements)
         var categories = new Set();
 
+        //for each product, add categories to Set
         data.products.forEach(function (product) {
           product.categories.forEach(function (category) {
             categories.add(category);
           });
         });
 
+        //for each category in set, add html dropdown menu choice
         categories.forEach(function (category) {
           $("#category").append("<option value='" + category + "'>" + category + "</option>");
         });
 
+        //On-click for button, get array of products with category in dropdown menu
         $("#filter-button").click(function () {
-          var filteredProducts = data.products.filter(function (product) {
-            return product.categories.includes($("#category").val());
+          var filter = data.products.filter(function (products) {
+            return products.categories.includes($("#category").val());
           });
 
-          var displayHtml = "<div id='filtered-products-container'>";
-          filteredProducts.forEach(function (product) {
-            displayHtml += "<div class='filtered-product'>";
-            displayHtml += "<h2>" + product.name + "</h2>";
-            displayHtml += "</div>";
+          var htmlString = "";
+          filter.forEach(function (product) {
+            htmlString+= "<h2>" + product.name + "</h2><br>";
+            htmlString+= "<p>" + product.description + "</p><br>";
+            htmlString+= "<h3>" + product.size + "</h3><br>";
+            htmlString+= "<h3>" + product.price + "</h3><br>";
           });
-          displayHtml += "</div>";
 
-          $("#productsByCategory").html(displayHtml);
+          $("#productsByCategory").html(htmlString);
+          
         });
       });
     });
