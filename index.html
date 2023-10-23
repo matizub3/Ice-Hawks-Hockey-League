@@ -14,10 +14,10 @@
       $.getJSON('products.json', function(data) {
 
           data.products.forEach(function(product){
-              $('#info').append(product.name);
-              $('#info').append(product.description);
-              $('#info').append(product.size);
-              $('#info').append(product.price);
+              $('#info').html('<h1>' + product.name '</h1><br>');
+              $('#info').html('<p>' + product.description '</p><br>');
+              $('#info').html('<h3> Size: ' + product.size '</h3><br>');
+              $('#info').html('<h3> Price: ' + product.price '</h3><br>');
           });
 
       })
