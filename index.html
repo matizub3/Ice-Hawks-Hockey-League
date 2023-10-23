@@ -13,7 +13,9 @@
 
     $.getJSON('products.json', function(data) {
 
-        console.log(data);
+        data.products.forEach(function print(product){
+            document.write(product.name);
+        });
 
     })
     
