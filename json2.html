@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON2</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="json-data"></div>
+
+  <script>
+
+    $(document).ready(function () {
+
+    $.getJSON('products.json', function(data) {
+
+        console.log(data);
+
+    })
+    
+    
+    
+        //   $.get("products.json", function (data) {
+        
+    //     var formattedData = data.map(function(product) {
+    //         return Object.keys(product).map(function(key) {
+    //             return key + ": " + product[key];
+    //         }).join('<br>');
+    //     }).join('<br><br>');
+
+    //     $("#json-data").html(formattedData);
+
+    //     });
+    });
+  </script>
+
+</body>
+</html>
