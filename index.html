@@ -12,15 +12,15 @@
     $(document).ready(function () {
 
       $.getJSON('products.json', function(data) {
-
+          var htmlString = "";
           data.products.forEach(function(product){
-              var htmlString = '<h1>' + product.name +'</h1><br>';
+              htmlString = '<h1>' + product.name +'</h1><br>';
               htmlString+='<p>' + product.description + '</p><br>';
-              htmlString+='<h3> Size: ' + product.size + '</h3><br>';
-              htmlString+='<h3> Price: ' + product.price + '</h3><br>';
-              $('#info').html(htmlString);
+              htmlString+='<h4> Size: ' + product.size + '</h3><br>';
+              htmlString+='<h4> Price: ' + product.price + '</h3><br>';
           });
-
+        
+        $('#info').html(htmlString);
       })
     });
   </script>
