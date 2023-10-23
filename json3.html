@@ -12,7 +12,7 @@
     $(document).ready(function () {
       
       $.get("products.json", function(data) {
-        var categories = [];
+        var categories = new Set();
 
         data.products.forEach(function(product) {
           product.categories.forEach(function(category) {
