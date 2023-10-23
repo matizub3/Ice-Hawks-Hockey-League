@@ -8,8 +8,8 @@
   <center>
     <div>
     <h1> Explore our Coffee Menu by Searching with your Favorite Roast </h1>
-    <form id="filter-form">
-      <select id="category-select">
+    <form>
+      <select id="category">
         <option value="">Select a Roast</option>
       </select>
       <button type="button" id="filter-button"> Search </button>
@@ -18,7 +18,7 @@
   </center>
   
 
-  <div id="filtered-products"></div>
+  <div id="productsByCategory"></div>
 
   <script>
     $(document).ready(function () {
@@ -32,7 +32,7 @@
           });
         });
 
-        var categorySelect = $("#category-select");
+        var categorySelect = $("#category");
         categories.forEach(function (category) {
           categorySelect.append("<option value='" + category + "'>" + category + "</option>");
         });
@@ -51,7 +51,7 @@
           });
           displayHtml += "</div>";
 
-          $("#filtered-products").html(displayHtml);
+          $("#productsByCategory").html(displayHtml);
         });
       });
     });
