@@ -6,8 +6,6 @@
 </head>
 <body>
 
-  <div id="productsByCategory"></div>
-
   <script>
     $(document).ready(function () {
       $.get("products.json", function (data) {
@@ -56,6 +54,8 @@
     </form>
   </div>
   </center>
+
+  <div id="productsByCategory"></div>
 
   <style>
     .productsByCategory {
