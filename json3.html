@@ -43,12 +43,9 @@
         categories.forEach(function (categories) {
           $("#category").append("<option value='" + categories + "'>" + categories + "</option>");
         });
-          
-      });
-    });
 
-    //On-click for button, get array of products with category in dropdown menu
-        function displayCategory() {
+        //On-click for button, get array of products with category in dropdown menu
+        $("#filter-button").click(function () {
           var filter = data.products.filter(function (products) {
             return products.categories.includes($("#category").val());
           });
@@ -62,8 +59,10 @@
           });
 
           $("#productsByCategory").html(htmlString);
-        }
-    
+          
+        });
+      });
+    });
   </script>
 
   <center>
@@ -73,7 +72,7 @@
       <select id="category">
         <option value="">Select a Roast</option>
       </select>
-      <button type="button" id="filter-button" onclick='displayCategory()'> Search </button>
+      <button type="button" id="filter-button"> Search </button>
     </form>
   </div>
   </center>
