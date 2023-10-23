@@ -34,9 +34,8 @@
         });
 
         $("#filter-button").click(function () {
-          var selectedCategory = $("#category").val();
           var filteredProducts = data.products.filter(function (product) {
-            return product.categories.includes(selectedCategory);
+            return product.categories.includes($("#category").val());
           });
 
           var displayHtml = "<div id='filtered-products-container'>";
