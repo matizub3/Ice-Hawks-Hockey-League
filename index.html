@@ -14,7 +14,7 @@
       $.getJSON('products.json', function(data) {
           var htmlString = "";
           data.products.forEach(function(product){
-              htmlString = '<h1>' + product.name +'</h1><br>';
+              htmlString+= '<h1>' + product.name +'</h1><br>';
               htmlString+='<p>' + product.description + '</p><br>';
               htmlString+='<h4> Size: ' + product.size + '</h3>';
               htmlString+='<h4> Price: ' + product.price + '</h3><br><br>';
