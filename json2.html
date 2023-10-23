@@ -29,8 +29,14 @@
               htmlString+= '<h1>' + product.name +'</h1><br>';
               htmlString+='<p>' + product.description + '</p><br>';
               htmlString+='<h4> Size: ' + product.size + '</h3>';
-              htmlString+='<h4> Price: ' + '$' + product.price + '</h3><br><br>';
-          });
+              htmlString+='<h4> Price: ' + '$' + product.price + '</h3><br>';
+
+              var categoriesString = "";
+              product.categories.forEach(function(category){
+                categoriesString+=category + " ";
+              });
+
+              htmlString+='<h4> Categories: ' + categoriesString + '</h4><br><br>';
         
         $('#info').html(htmlString);
       })
