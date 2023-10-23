@@ -21,21 +21,21 @@
     $(document).ready(function () {
       $.get("products.json", function (data) {
         
-        var categorySet = new Set();
+        var categories = new Set();
 
         data.products.forEach(function (product) {
-          product.categorySet.forEach(function (category) {
-            categorySet.add(category);
+          product.categories.forEach(function (category) {
+            categories.add(category);
           });
         });
 
-        categorySet.forEach(function (category) {
+        categories.forEach(function (category) {
           $("#category").append("<option value='" + category + "'>" + category + "</option>");
         });
 
         $("#filter-button").click(function () {
           var filteredProducts = data.products.filter(function (product) {
-            return product.categorySet.includes($("#category").val());
+            return product.categories.includes($("#category").val());
           });
 
           var displayHtml = "<div id='filtered-products-container'>";
