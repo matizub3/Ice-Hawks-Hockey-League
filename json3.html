@@ -29,13 +29,12 @@
           });
         });
 
-        var categorySelect = $("#category");
         categories.forEach(function (category) {
-          categorySelect.append("<option value='" + category + "'>" + category + "</option>");
+          $("#category").append("<option value='" + category + "'>" + category + "</option>");
         });
 
         $("#filter-button").click(function () {
-          var selectedCategory = categorySelect.val();
+          var selectedCategory = $("#category").val();
           var filteredProducts = data.products.filter(function (product) {
             return product.categories.includes(selectedCategory);
           });
