@@ -11,29 +11,20 @@
 
     $(document).ready(function () {
 
-    $.getJSON('products.json', function(data) {
+      $.getJSON('products.json', function(data) {
 
-        data.products.forEach(function print(product){
-            console.log(product.name);
-        });
+          data.products.forEach(function print(product){
+              $('#info').append('<h1>' + product.name '</h1><br>');
+              $('#info').append('<p>' + product.description '</p><br>');
+              $('#info').append('<h3> Size: ' + product.size '</h3><br>');
+              $('#info').append('<h3> Price: ' + product.price '</h3><br>');
+          });
 
-    })
-    
-    
-    
-        //   $.get("products.json", function (data) {
-        
-    //     var formattedData = data.map(function(product) {
-    //         return Object.keys(product).map(function(key) {
-    //             return key + ": " + product[key];
-    //         }).join('<br>');
-    //     }).join('<br><br>');
-
-    //     $("#json-data").html(formattedData);
-
-    //     });
+      })
     });
   </script>
+
+  <div id="info"></div>
 
 </body>
 </html>
