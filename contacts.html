@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans+Condensed&family=Mulish&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
+    <style>
+        .contact-content {
+            margin-top: min(100px);
+            margin-top: 10%;
+            margin-right: 10%;
+            margin-left: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .topPage {
+            max-width: 50%;
+            text-align: center;
+            margin-bottom: 3%;
+        }
+
+        .topPage a {
+            color: var(--light-blue);
+            text-decoration: underline;
+        }
+
+        label {
+            font-family: 'Mulish', sans-serif;
+            font-size: 1.1rem;
+            font-weight: normal;
+        }
+
+        .formContainer{
+            position: relative;
+            margin-bottom: 4%;
+            width: 80%;
+            border: 5px solid var(--gray-blue);
+            background-color: var(--light-blue);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 
+                "logo1 form form logo2";
+        }
+
+        .ages {
+            display: flex;
+            column-gap: 2%;
+            margin-bottom: 3%;
+        }
+
+        #contact {
+            grid-area: form;
+            border-color: var(--gray-blue);
+            padding: 4%;
+            border-left: 5px solid var(--gray-blue);
+            border-right: 5px solid var(--gray-blue);
+            background-color: white;
+        }
+        .check{
+            height: 15px;
+            width: 15px;
+            transform: translate(1px, 3px);
+            accent-color: var(--gray-blue);
+        }
+
+        .fields {
+            margin-bottom: 3%;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+
+        .fields label {
+            margin-bottom: 1%;
+        }
+
+        .name-fields {
+            display: flex;
+            column-gap: 10%;
+            width: 100%;
+        }
+
+        #firstName, #lastName {
+            width: 100%;
+            margin-bottom: 2%;
+        }
+
+        #email, #number {
+            width: 100%;
+            margin-bottom: 2%;
+        }
+
+        .formContainer #img1 {
+            grid-area: logo1;
+        }
+
+        .formContainer #img2 {
+            grid-area: logo2;
+        }
+
+        #img1, #img2 {
+            width: 100%;
+            align-self: center;
+        }
+        .info {
+            margin: 0 auto 5%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info h2{
+            width: 90%;
+            margin: 15px auto;
+            text-align: center;
+            color: black;
+        }
+
+        #socials {
+            text-align: center;
+        }
+        
+        input[type='button']{
+            background-color: var(--light-blue);
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-top: 2.4%;
+            cursor: pointer;
+            padding: 10px 30px;
+            font-family: 'Mulish', sans-serif;
+            border-radius: 16px;
+        }
+
+        input[type='button']:hover{
+            background-color: var(--gray-blue);
+        }
+
+        @media (max-width: 1080px) {
+            .ages {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .contact-content {
+                margin-top: min(140px);
+                margin-top: 20%;
+                margin-bottom: 12%;
+            }
+
+            .name-fields {
+                flex-direction: column;
+            }
+
+            .formContainer {
+                grid-template-columns: none;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas: 
+                "logo1"
+                "form"
+                "form"
+                "logo2";
+            }
+
+            #img1, #img2 {
+                width: 40%;
+                min-width: 200px;
+                align-self: center;
+                justify-self: center;
+            }
+
+            #contact {
+                border: none;
+                border-top: 5px solid var(--gray-blue);
+                border-bottom: 5px solid var(--gray-blue);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <a href="index.html" class="nav-branding"><img src="./images/hockeylogo.png" alt=""></a></li>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                    <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                    <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                    <li class="nav-link"><a href="stats.html">STATS</a></li>
+                    <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                    <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                    <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hamburger">
+        <input type="checkbox", class="hamburger-check">
+        <button><img src="images/hamburger-menu.svg" alt=""></button>
+        <ul class="menu">
+            <div class="hamburger-links">
+                <li><a href="./index.html"><img src="./images/hockeylogo.png" class="nav-logo"></a></li>
+                <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                <li class="nav-link"><a href="stats.html">STATS</a></li>
+                <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="contact-content">
+        <div class = "topPage">
+            <h1>Contact Us Now!</h1>
+            <h3>Want to get involved with the team? Whether you want to sign up for team events, want a chance to watch our games in a luxury suite, or simply want to receive news and updates right away, get in touch with us now to never miss an update.
+            If you're interested in joining a team, check out our <a href="teams.html">Teams</a> page!</h3>
+        </div>
+        <div class = "formContainer">
+            <img src="./images/clip.jpg" id = 'img1' alt="hockey logo" >
+            <form id = 'contact'>
+                <div class="fields">
+                    <span class="name-fields">
+                        <span>
+                            <label for="firstName">First Name*: </label><br>
+                            <input type = "text" id = 'firstName'>
+                        </span>
+                        <span>
+                            <label for="lastName">Last Name:</label><br>
+                            <input type = "text" id = 'lastName'>
+                        </span>
+                    </span>
+                    <span>
+                        <label for="email"> Email*: </label> <br>
+                        <input type="email" id="email">
+                    </span>
+                    <span>
+                        <label for="number"> Phone Number*: </label><br>
+                        <input type = "text" id ="number">
+                    </span>
+                    <p style="font-size: 1rem;">&lpar;* indicates required fields&rpar;</p>
+                </div>
+                <span class="ages">
+                    <p>Age:</p>
+                    <span><input type="radio" name = "age" id="l18">&nbsp;<label for="l18">&lt;18</label></span>
+                    <span><input type="radio" name = "age" id="l30">&nbsp;<label for="l30">18-30</label></span>
+                    <span><input type="radio" name = "age" id="l55">&nbsp;<label for="l55">31-55</label></span>
+                    <span><input type="radio" name = "age" id="g55">&nbsp;<label for="g55">55+</label></span>
+                    <br>
+                </span>
+                <input type ="checkbox" id = "control" class = "check" onclick = showOptions()>
+                <label>&nbsp;I would like to opt in to receiving updates from Icehawks Hockey League </label> <br>
+                <span id = 'options'><br><p>What would you like to receive updates about? </p><br>
+                    <input type="checkbox" class = "check">
+                    <label>Season Ticket Openings</label> <br>
+                    <input type="checkbox"class = "check">
+                    <label>Roster Updates</label><br>
+                    <input type = "checkbox"class = "check">
+                    <label>Fan Events</label> <br>
+                </span>
+                <input type = "button" onclick = checkReqs() value = "Submit">
+            </form>
+            <img src="./images/clipflip.jpg" id = 'img2' alt="hockey logo" >
+        </div>
+        <div class = "info">
+            <h2>Have any Questions? Reach out directly!</h2>
+            <div id = 'socials'>
+                <p>General Inquries: 914-539-1333</p>
+                <p>Business Questions: 212-465-6000</p>
+                <p>Email: icehawks@gmail.com</p>
+                <p>Twitter: @IcehawksHL</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h2>ICEHAWKS HOCKEY LEAGUE</h2>
+    </footer>
+    <script>
+       $(document).ready(
+        function (){
+            $('#options').hide();
+            $('#whitespace').hide();
+        })
+        var i = 0;
+        function showOptions(){
+            if (i == 0){
+                i++;
+            }
+            if (document.getElementById('control').checked){
+                $('#options').show();
+                $('#whitespace').show();
+
+            }
+            else {
+                $('#options').hide();
+                $('#whitespace').hide();
+            }
+        }
+
+        function checkReqs(){
+
+            flag = 0;
+            reqs = ["#firstName", "#email", "#number"];
+            for (i = 0; i < 3; i++){
+                $(reqs[i]).css('background-color', 'white');
+            }
+            for (i = 0; i < 3; i++){
+                if ($(reqs[i]).val() == ""){
+                    flag = 1;
+                    $(reqs[i]).css('background-color', 'rgb(230, 105, 105, 0.281)');
+                }
+            }
+            if (flag == 0){
+                alert("Your response has been submitted");
+                for (i = 0; i < 3; i++){
+                    document.getElementById(reqs[i].substr(1)).value = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

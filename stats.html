@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tryouts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
+    <script src = "api.js"></script>
+    <style>
+        #tryout-content {
+            margin-top: clamp(10%, 100px, 100px);
+        }
+
+        .tryout-header {
+            text-align: center;
+            width: 100%;
+        }
+
+        .tryout-text {
+            margin-right: 10%;
+            margin-left: 10%;
+        }
+
+        #form {
+            font-size: 20px;
+            margin: 0 auto;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            max-width: 70%;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #465362;
+            min-height: 325px;
+        }
+
+        form {
+            display: flex;
+        }
+
+        #you {
+            padding-top: 50px;
+            padding-left: 25px;
+            width: 50%;
+            float: left;
+            flex-direction: column;
+            border-style: solid;
+            border-width: 0;
+            border-right-width: 2px;
+            border-color: #465362;
+            min-height: 325px;
+        }
+
+        #them {
+            padding: 10px;
+            padding-top: 50px;
+            width: 50%;
+            float: left;
+            border-left-width: 2px;
+            text-align: center;
+            min-height: 325px;
+        }   
+
+        #statCount, #gameCount {
+            width: 30px;
+            border-color: #465362;
+            border-style: solid;
+        }
+
+        #nhlTeam {
+            max-width: 350px;
+            height: 25px;
+            font-size: 1.2rem;
+            color:#465362;
+            padding: 4% 1.6%;
+        }
+        #sub {
+            background-color:var(--light-blue);
+            border-style: solid;
+            border-color: #465362;
+            border-radius: 3px;
+            padding: 5px;
+            font-size: 25px;
+        }
+
+        #sub:hover{
+            background-color: lightblue;
+        }
+
+        #i_t:checked{
+            accent-color: #465362;
+        }
+
+        #nhlTeam{
+            margin-top: 25px;
+        }
+
+        @media (max-width: 1080px) {
+            #nhlTeam{max-width: 150px;}
+        }
+
+        table {
+            font-family:'Fira Sans Condensed', sans-serif;
+            width: 75%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            transform: translate(-1px, 0);
+        }
+
+        label {
+            font-family: 'Mulish', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        th {
+            border-bottom: solid 1px;
+            font-size: 1.8rem;
+        }
+
+        #left, #myData, #yourFinalStat{
+            border-right: solid 0.5px;
+            margin: 0;
+
+        }
+
+        #tdata1 {
+            border-right: 0.5px solid;
+        }
+
+        #tdata2 {
+            padding-left: 20px;
+        }
+
+        td {
+            height: 100px;
+            border-bottom: 1px solid;
+        }
+
+        #right, #tdata2 #nhlFinalStat{
+            /* border-left: 0.5px solid; */
+            margin: 0;
+
+        }
+
+        #yourFinalStat, #nhlFinalStat {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            width: 350px;
+            border-bottom-width: 0px ;
+        }
+
+        #results {
+            margin-bottom: 8%;
+        }
+
+        @media (max-width: 740px) {
+            form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #you {
+                width: 100%;
+                border: none;
+                border-bottom: 2px #465362 solid;
+            }
+
+            #them {
+                border: none;
+            }
+            #myData, #nhlData {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <a href="index.html" class="nav-branding"><img src="./images/hockeylogo.png" alt=""></a></li>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                    <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                    <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                    <li class="nav-link"><a href="stats.html">STATS</a></li>
+                    <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                    <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                    <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hamburger">
+        <input type="checkbox", class="hamburger-check">
+        <button><img src="images/hamburger-menu.svg" alt=""></button>
+        <ul class="menu">
+            <div class="hamburger-links">
+                <li><a href="./index.html"><img src="./images/hockeylogo.png" class="nav-logo"></a></li>
+                <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                <li class="nav-link"><a href="stats.html">STATS</a></li>
+                <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+            </div>
+        </ul>
+    </div>
+    <div id="tryout-content">
+        <div class="tryout-header">
+            <div class="tryout-text">
+                <h1>SEE HOW YOUR SKILLS STACK UP AGAINST THE PROS!</h1>
+                <p>Compare your personal or team's stats and accomplishments against those in the
+                    NHL to get a guage on your ability and how far along you are on your journey to become the best!<p>
+            </div>
+            <div id = 'form'>
+                <form>
+                    <div id = 'you'>
+                        <label for = 'statSelect'>Select the stat you want to evaluate</label>
+                        <select id = 'statSelect' value = '' onchange="changeStat()">
+
+                            <option value = "Goals" selected >Goals</option>
+                            <option value = "Assists">Assists</option>
+                            <option value = "Points">Points</option>
+                        </select><br><br>
+                        <label for = 'statCount' id = 'l1'>Enter the number of goals your team has </label>
+                        <input type="text" id = 'statCount' value = ''><br><br>
+                        <label for = 'gameCount'>Enter the number of games played by your team</label>
+                        <input type = "text" id = 'gameCount' value = ''><br><br>
+                        <label for='i'>Use Team Stats</label>
+                        <input type = "radio" name = "i_t" id = 't' onclick = "hideFilter(), changeStat()" checked><br>
+                        <label for='i'>Use Individual Stats</label>
+                        <input type = "radio" name = "i_t" id = 'i' onclick = "showFilter(), changeStat()"><br>
+                    </div>
+                    <div id = 'them'>
+                        <label for ='nhlTeam'>Enter the name or abbriviation of an NHL team </label><br>
+                        <input type = 'text' id = 'nhlTeam' value = ''><br><br><br>
+                        <div id = filterDiv style="visibility: hidden;">
+                        <label for = 'filter'></label> Compare yourself against the: </label>
+                        <select id = 'filter' value = ''>
+                            <option value = 'high' selected> Team Highest</option>
+                            <option value = 'avg'>Team Average</option>
+                            <option value = 'low'>Team Lowest</option>
+                        </select>
+                        <br><br>
+                    </div>
+                    <br>
+                    <input type="button" value = 'Compare!' onclick="validate()" id = 'sub'>
+                </form>
+            </div>
+        </div>
+        <div id = 'results'>
+            <table id = "boxScore">
+                <tr>
+                    <th id = 'left'>Your Data</th>
+                    <th id = 'right'>NHL Data</th>
+                </tr>
+                <tr>
+                    <td id = 'tdata1'>&nbsp;
+                        <p id = 'myData'></p>
+                    </td>
+                    <td id = 'tdata2'>&nbsp;
+                        <p id = 'nhlData'></p>
+                    </td>
+                </tr>
+                    <td id = "yourFinalStat">&nbsp;
+                        <p></p>
+                    </td>
+                    <td id = 'nhlFinalStat'>&nbsp;
+                        <p ></p>
+                    </td>
+
+
+            </table>
+            
+        </div>
+        <p id = 'results'></p>
+    </div>
+    <footer>
+        <h2>ICEHAWKS HOCKEY LEAGUE</h2>
+    </footer>
+</body>
+</html>

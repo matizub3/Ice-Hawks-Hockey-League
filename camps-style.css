@@ -1,0 +1,187 @@
+
+.camp-schedule{
+    background-color:  #465362;
+    opacity: 0.95;
+    justify-content: center;
+    width: 100%;
+    margin: 4% 0 8%;
+    color: white;
+}
+
+#camp {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lesson-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color:  #465362;
+    margin: 8% 10% 0;
+    margin-top: min(20px);
+}
+
+.cover_box{
+    background-color: #606063;
+    filter: blur(2px);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#hero_lessons{
+    background-image: url(images/cross2.webp);
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    padding-top: clamp(10%, 100px, 100px);
+}
+
+
+.banner_test {
+    background-image: url(images/black_hockey_banner_re.jpg);
+    height: 130px;
+    color: white;
+}
+
+.camp-info {
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    background-color: var(--light-blue);
+    width: 60%;
+    padding: 4vh 4%;
+}
+
+.bullets {
+    margin-left: 5%;
+}
+
+.camp-header {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 3%;
+    color: black;
+}
+
+h4 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.team-grid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+th {
+    text-align: left;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 1.4rem;
+}
+
+tr {
+    border: 1px solid var(--gray-blue);
+}
+
+th, td {
+    padding: 2% 1% 2%;
+}
+
+td {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.grid-camp {
+    margin: 40vh 10% 8%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 20px;
+}
+
+.watch-text {
+    color: black;
+    font-weight: 700;
+}
+
+.grid-item-1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    background-color: #465362;
+}
+
+.item1-text {
+    padding: 6vh 6%;
+}
+
+.item1-text2 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.grid-item-2 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.box2 {
+    margin: none;
+}
+
+@media (max-width: 1090px) {
+    .grid-camp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10vh;
+    }
+
+    .watch-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 960px) {
+    #tryout-content {
+        margin-top: min(140px);
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 842px) {
+    .grid-camp {
+        margin-top: 50vh;
+    }
+}
+
+@media (max-width: 670px) {
+    th {
+        font-size: 1.2rem;
+    }
+
+    td {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    iframe {
+        width: 400px;
+        height: 225;
+    }
+}

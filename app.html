@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home-style.css">
+    <script src="app.js" async></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <a href="index.html" class="nav-branding"><img src="./images/hockeylogo.png" alt=""></a></li>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                    <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                    <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                    <li class="nav-link"><a href="stats.html">STATS</a></li>
+                    <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                    <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                    <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hamburger">
+        <input type="checkbox", class="hamburger-check">
+        <button><img src="images/hamburger-menu.svg" alt=""></button>
+        <ul class="menu">
+            <div class="hamburger-links">
+                <li><a href="./index.html"><img src="./images/hockeylogo.png" class="nav-logo"></a></li>
+                <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                <li class="nav-link"><a href="stats.html">STATS</a></li>
+                <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+            </div>
+        </ul>
+    </div>
+    <section id="products" class="apparel-content">
+        <h1>Featured Products</h1>
+        <h4>Our newest arrivals for the 2023-2024 session.</h4>
+        <div class="cart-icon">
+            <a href="#container-cart"><img src="./images/shopping-cart.svg" width="40px"></a>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img class="pro-image" src="./images/stick_pro.jpg">
+                <div class="description">
+                    <p class="details">hockey stick</p>
+                    <h4 class="pro-title">Hockey Sticks</h4>
+                    <p class="pro-price">$200</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pro">
+                <img class="pro-image" src="./images/shin_pro.jpg">
+                <div class="description">
+                    <p class="details">protective gear</p>
+                    <h4 class="pro-title">Hockey Shins Guards</h4>
+                    <p class="pro-price">$30</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pro">
+                <img class="pro-image" src="./images/hpants_pro.jpg">
+                <div class="description">
+                    <p class="details">protective gear</p>
+                    <h4 class="pro-title">Hockey Pants</h4>
+                    <p class="pro-price">$50</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pro">
+                <img class="pro-image" src="./images/helmet_pro.jpg">
+                <div class="description">
+                    <p class="details">protective gear</p>
+                    <h4 class="pro-title">Helmet Shield</h4>
+                    <p class="pro-price">$30</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pro">
+                <img class="pro-image" src="./images/jacket2_pro.jpg">
+                <div class="description">
+                    <p class="details">jackets</p>
+                    <h4 class="pro-title">Black Jacket</h4>
+                    <p class="pro-price">$70</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pro">
+                <img class="pro-image" src="./images/jacket_pro.jpg">
+                <div class="description">
+                    <p class="details">jackets</p>
+                    <h4 class="pro-title">Blue Jacket</h4>
+                    <p class="pro-price">$75</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pro">
+                <img class="pro-image" src="./images/joggers_pro.jpg">
+                <div class="description">
+                    <p class="details">joggers</p>
+                    <h4 class="pro-title">Branded Joggers</h4>
+                    <p class="pro-price">$60</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pro">
+                <img class="pro-image" src="./images/puck_pro.jpg">
+                <div class="description">
+                    <p class="details">hockey puck</p>
+                    <h4 class="pro-title">Pucks</h4>
+                    <p class="pro-price">$16</p>
+                    <button class="btn" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <section id="container-cart">
+            <h2 style="color: black;">CART</h2>
+            <div class="cart-row">
+                <h3 class="cart-item1 cart-header cart-column">ITEM</h3>
+                <h3 class="cart-price1 cart-header cart-column">PRICE of 1</h3>
+                <h3 class="cart-quantity1 cart-header cart-column">QUANTITY</h3>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="total-price">$0</span>
+            </div>
+            <button class="purchase-cart" type="button">Purchase</button>
+        </section>
+
+    </section>
+
+    <footer>
+        <h2>ICEHAWKS HOCKEY LEAGUE</h2>
+    </footer>
+    
+</body>
+</html>

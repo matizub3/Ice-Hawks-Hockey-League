@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="team-styles.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <a href="index.html" class="nav-branding"><img src="./images/hockeylogo.png" alt=""></a></li>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                    <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                    <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                    <li class="nav-link"><a href="stats.html">STATS</a></li>
+                    <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                    <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                    <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hamburger">
+        <input type="checkbox", class="hamburger-check">
+        <button><img src="images/hamburger-menu.svg" alt=""></button>
+        <ul class="menu">
+            <div class="hamburger-links">
+                <li><a href="./index.html"><img src="./images/hockeylogo.png" class="nav-logo"></a></li>
+                <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
+                <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+                <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+                <li class="nav-link"><a href="stats.html">STATS</a></li>
+                <li class="nav-link"><a href="app.html">APPAREL</a></li>
+                <li class="nav-link"><a href="coach.html">COACHES</a></li>
+                <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="teams">
+            <div class="header-text">
+                <h1>Teams & Tryouts</h1>
+                <h3>Interested in playing hockey with us? Meet the teams in the Icehawks Hockey League!</h3>
+            </div>
+            <div id="slideshow">
+                <button id="btn1" class="slideshow-btn" onclick="changeTeamLeft()">&lt;</button>
+                <div class="slides">
+                    <img src="" class="team-img">
+                    <h3 class="team-name"></h3>
+                </div>
+                <button id="btn2" class="slideshow-btn" onclick="changeTeamRight()">&gt;</button>
+            </div>
+        </div>
+        <!-- <div id="tryouts">
+            <div class="tryout-header">
+                <h2>Tryout Schedules:</h2>
+                <h3>Come tryout for our hockey teams!</h3>
+            </div>
+            <table class="tryout-schedule">
+                <tr>
+                    <th>TEAM</th>
+                    <th>TRYOUT DAYS</th>
+                    <th>TRYOUT TIMES</th>
+                </tr>
+                <tr>
+                    <td>Northern Stars</td>
+                    <td>Tuesday 11/7 - Friday 11/10</td>
+                    <td>5:30pm - 7:30pm</td>
+                </tr>
+                <tr>
+                    <td>Central City Cyclones</td>
+                    <td>Saturday 11/11 - Sunday 11/12<br>Monday 11/13</td>
+                    <td>10:30am - 12:00pm<br>4:30pm - 6:00pm</td>
+                </tr>
+                <tr>
+                    <td>Great Lakes Grizzlies</td>
+                    <td>Saturday 11/11 - Tuesday 11/14</td>
+                    <td>5:30pm - 8:00pm</td>
+                </tr>
+                <tr>
+                    <td>East Coast Eagles</td>
+                    <td>Monday 10/30 - Thursday 11/2</td>
+                    <td>4:00pm - 7:00pm</td>
+                </tr>
+            </table>
+        </div> -->
+    </div>
+    <footer>
+        <h2>ICEHAWKS HOCKEY LEAGUE</h2>
+    </footer>
+    
+    <script>
+            const images = ['./images/team1.webp', './images/team2.webp', './images/team3.webp', './images/team4.webp']
+            const names = ['Northern Stars', 'Central City Cyclones', 'Great Lakes Grizzlies', 'East Coast Eagles']
+            const teamImg = $('.team-img')
+            const teamName = $('.team-name')
+
+            let imgIndex = 100
+            getImgIndex = () => imgIndex % 4
+
+            teamImg.attr('src', `${images[getImgIndex()]}`)
+            teamName.html(`Team: ${names[getImgIndex()]}`)
+
+            function changeTeamLeft() {
+                teamImg.fadeOut(900, function() {
+                    imgIndex--;
+                    teamImg.attr('src', `${images[getImgIndex()]}`)
+                    teamName.html(`Team: ${names[getImgIndex()]}`)
+                    teamImg.fadeIn(900);
+                });
+            }
+
+            function changeTeamRight() {
+                teamImg.fadeOut(900, function() {
+                    imgIndex++;
+                    teamImg.attr('src', `${images[getImgIndex()]}`)
+                    teamName.html(`${names[getImgIndex()]}`)
+                    teamImg.fadeIn(900);
+                });
+            }
+    </script>
+</body>
+</html>
