@@ -1,151 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title> Login Page </title>
-    <style>
-        h1, h2, h3 {
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title> Login Page </title>
+  <style>
+    h1, h2, h3 {
+      text-align: center;
+    }
 
-        #membership-content {
-            margin: 0 10%;
-            margin-top: clamp(10%, 100px, 100px);
-            margin-bottom: 8%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    #membership-content {
+      margin: 0 10%;
+      margin-top: clamp(10%, 100px, 100px);
+      margin-bottom: 8%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .membership-text {
-            margin-bottom: 6vh;
-            width: 60%;
-        }
+    .membership-text {
+      margin-bottom: 6vh;
+      width: 60%;
+    }
 
-        form {
-            margin: 0 20%;
-        }
+    form {
+      margin: 0 20%;
+    }
 
-        img {
-            max-width: 50%;
-        }
+    img {
+      max-width: 50%;
+    }
 
-        #premiumExplanation, #standardExplanation {
-            margin-left: 50px;
-        }
+    #premiumExplanation, #standardExplanation {
+      margin-left: 50px;
+    }
 
-        label, input {
-            font-family: 'Mulish', sans-serif;
-            font-size: 1.1rem;
-            font-weight: normal;
-        }
+    label, input {
+      font-family: 'Mulish', sans-serif;
+      font-size: 1.1rem;
+      font-weight: normal;
+    }
 
-        .membership-submit {
-            background-color: var(--light-blue);
-            border: none;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.1rem;
-            margin-top: 2.4%;
-            cursor: pointer;
-            padding: 10px 30px;
-            font-family: 'Mulish', sans-serif;
-            border-radius: 16px;
-        }
+    .membership-submit {
+      background-color: var(--light-blue);
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin-top: 2.4%;
+      cursor: pointer;
+      padding: 10px 30px;
+      font-family: 'Mulish', sans-serif;
+      border-radius: 16px;
+    }
 
-        .nav-php-logo {
-            margin-top: 5px;
-            margin-left: 8%;
-        }
+    .nav-php-logo {
+      margin-top: 5px;
+      margin-left: 8%;
+    }
 
-        @media (max-width: 720px) {
-            .membership-submit {
-                width: 100%;
-            }
-        }
-    </style>
+    @media (max-width: 720px) {
+      .membership-submit {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="nav-branding nav-php-logo"><img src="./images/hockeylogo.png" width="160px" height="60px"></a></li>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
-                <li class="nav-link"><a href="teams.html">TEAMS</a></li>
-                <li class="nav-link"><a href="camps.html">CAMPS</a></li>
-                <li class="nav-link"><a href="stats.html">STATS</a></li>
-                <li class="nav-link"><a href="app.html">APPAREL</a></li>
-                <li class="nav-link"><a href="coach.html">COACHES</a></li>
-                <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="hamburger">
-        <input type="checkbox", class="hamburger-check">
-        <button><img src="images/hamburger-menu.svg" alt=""></button>
-        <ul class="menu">
-            <div class="hamburger-links">
-                <li><a href="./index.html"><img src="./images/hockeylogo.png" class="nav-logo"></a></li>
-                <li class="nav-link"><a href="membership.php">MEMBERSHIP</a></li>
-                <li class="nav-link"><a href="teams.html">TEAMS</a></li>
-                <li class="nav-link"><a href="camps.html">CAMPS</a></li>
-                <li class="nav-link"><a href="stats.html">STATS</a></li>
-                <li class="nav-link"><a href="app.html">APPAREL</a></li>
-                <li class="nav-link"><a href="coach.html">COACHES</a></li>
-                <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
-            </div>
-        </ul>
+  <header>
+    <a href="index.html" class="nav-branding nav-php-logo">
+      <img src="./images/hockeylogo.png" width="160px" height="60px" alt="Hockey Logo">
+    </a>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-link"><a href="membership.html">MEMBERSHIP</a></li>
+        <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+        <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+        <li class="nav-link"><a href="stats.html">STATS</a></li>
+        <li class="nav-link"><a href="app.html">APPAREL</a></li>
+        <li class="nav-link"><a href="coach.html">COACHES</a></li>
+        <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hamburger">
+    <input type="checkbox" class="hamburger-check">
+    <button>
+      <img src="images/hamburger-menu.svg" alt="Menu">
+    </button>
+    <ul class="menu">
+      <div class="hamburger-links">
+        <li>
+          <a href="./index.html">
+            <img src="./images/hockeylogo.png" class="nav-logo" alt="Hockey Logo">
+          </a>
+        </li>
+        <li class="nav-link"><a href="membership.html">MEMBERSHIP</a></li>
+        <li class="nav-link"><a href="teams.html">TEAMS</a></li>
+        <li class="nav-link"><a href="camps.html">CAMPS</a></li>
+        <li class="nav-link"><a href="stats.html">STATS</a></li>
+        <li class="nav-link"><a href="app.html">APPAREL</a></li>
+        <li class="nav-link"><a href="coach.html">COACHES</a></li>
+        <li class="nav-link"><a href="contacts.html">CONTACTS</a></li>
+      </div>
+    </ul>
+  </div>
+  <div id="membership-content">
+    <div class="membership-text">
+      <h1>Join our league</h1>
+      <h2>Become the next MVP in our teams</h2>
+      <h3 style="margin: 0 10%;">Wherever you are on your journey towards being a Hockey Champion, the IceHawks have a spot for you.</h3>
     </div>
-    <div id="membership-content">
-        <div class="membership-text">
-            <h1> Join our league </h1>
-            <h2> Become the next MVP in our teams </h2>
-            <h3 style="margin: 0 10%;"> Wherever you are on your journey towards being a Hockey Champion, the IceHawks have a spot for you. </h3>
-        </div>
-        <div class="form">
-            <form action="processData.php" method="post">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-                <br><br>
-        
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-                <br><br>
-        
-                <label for="emergencyContact">Emergency Contact Phone Number:</label>
-                <input type="tel" id="emergencyContact" name="emergencyContact" required>
-                <br><br>
-        
-                <label for="parentEmail">Parent Email:</label>
-                <input type="email" id="parentEmail" name="parentEmail" required>
-                <br><br>
-        
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required min="5" max="18" required>
-                <br><br>
-        
-                <label>Coaching Package:</label>
-                <br><br>
-                <input type="radio" id="premiumPackage" name="coachingPackage" value="premium" checked>
-                <label for="premiumPackage">Premium Coaching Package ($369.99) </label> <br> <br>
-                <p> Our Premium Hockey Coaching Package offers extended ice time, personalized 1 on 1 coaching, and exclusive resources for an enhanced hockey experience. </p>
-                <br><br>
-                <input type="radio" id="standardPackage" name="coachingPackage" value="standard">
-                <label for="standardPackage">Standard Coaching Package ($219.99) </label> <br> <br>
-                <p> The Standard Coaching Package provides a supportive environment, fostering skill development and teamwork within the Ice Hawks community.</p>
-                <br>
-                <input class="membership-submit" type="submit" value="Submit">
-            </form>
-        </div>
-        <h3 style="margin-top: 4vh; text-align: center; color: black"> Payments are due once placement is confirmed after tryouts </h3>
+    <div class="form">
+      <!-- Removed action attribute as PHP functionality is not supported -->
+      <form method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <br><br>
+
+        <label for="emergencyContact">Emergency Contact Phone Number:</label>
+        <input type="tel" id="emergencyContact" name="emergencyContact" required>
+        <br><br>
+
+        <label for="parentEmail">Parent Email:</label>
+        <input type="email" id="parentEmail" name="parentEmail" required>
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="5" max="18">
+        <br><br>
+
+        <label>Coaching Package:</label>
+        <br><br>
+        <input type="radio" id="premiumPackage" name="coachingPackage" value="premium" checked>
+        <label for="premiumPackage">Premium Coaching Package ($369.99)</label>
+        <br><br>
+        <p>Our Premium Hockey Coaching Package offers extended ice time, personalized 1 on 1 coaching, and exclusive resources for an enhanced hockey experience.</p>
+        <br><br>
+        <input type="radio" id="standardPackage" name="coachingPackage" value="standard">
+        <label for="standardPackage">Standard Coaching Package ($219.99)</label>
+        <br><br>
+        <p>The Standard Coaching Package provides a supportive environment, fostering skill development and teamwork within the Ice Hawks community.</p>
+        <br>
+        <input class="membership-submit" type="submit" value="Submit">
+      </form>
     </div>
-    <footer>
-        <h2>ICEHAWKS HOCKEY LEAGUE</h2>
-    </footer>
+    <h3 style="margin-top: 4vh; text-align: center; color: black">
+      Payments are due once placement is confirmed after tryouts
+    </h3>
+  </div>
+  <footer>
+    <h2>ICEHAWKS HOCKEY LEAGUE</h2>
+  </footer>
 </body>
 </html>
-
-
